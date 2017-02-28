@@ -31,7 +31,7 @@ def plotPlanetWithDiscoveryMethod(_discoverymethod):
 				semimajoraxis = float(planet.findtext("./semimajoraxis"))
 				discoverymethod = planet.findtext("./discoverymethod")
 				if discoverymethod==_discoverymethod:
-					gnuplot.stdin.write("%e\t%e\n"%(mass, semimajoraxis))
+					gnuplot.stdin.write("%e\t%e\n"%(semimajoraxis, mass))
 			except:
 				# Most likely cause for an exception: Mass or semi-major axis not specified for this planet.
 				# One could do a more complicated check here and see if the period and the mass of the host star is given and then calculate the semi-major axis 
